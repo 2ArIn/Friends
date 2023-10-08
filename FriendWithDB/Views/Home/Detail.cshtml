@@ -1,0 +1,11 @@
+﻿@using FriendWithDB.Models;
+@model Friend
+
+@{
+    ViewData["Title"] = "Detail Page";
+}
+<div class="container col-md-8 offset-2">
+    ID : @Model.Id |
+    Name : @Model.Name
+    <img src="@Model.ImageUrl" />
+</div>

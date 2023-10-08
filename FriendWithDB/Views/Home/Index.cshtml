@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Friend>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container col-md-8 offset-2 ">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>شماره</th>
+                <th>نام</th>
+                <th>عکس</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td><img src="@item.ImageUrl" alt="@item.Name" class="img-fluid rounded-circle" /></td>
+                </tr>
+            }
+        </tbody>
+
+
+    </table>
+</div>
